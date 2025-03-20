@@ -2,6 +2,15 @@
 #include <pico/cyw43_arch.h>
 #include <hardware/i2c.h>
 
+#include "ssd1306/ssd1306.h"
+
+#define I2C_PORT i2c0
+#define I2C_SDA 4  // GPIO pin for SDA
+#define I2C_SCL 5  // GPIO pin for SCL
+#define SSD1306_WIDTH 128
+#define SSD1306_HEIGHT 64
+#define SSD1306_ADDRESS 0x3C  // Typical address for SSD1306, might be 0x3D
+
 int main() {
     stdio_init_all();
 
